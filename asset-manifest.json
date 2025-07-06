@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/naveraladin-app/static/css/main.85ef5e8d.css",
+    "main.js": "/naveraladin-app/static/js/main.5a77a1c9.js",
+    "index.html": "/naveraladin-app/index.html",
+    "main.85ef5e8d.css.map": "/naveraladin-app/static/css/main.85ef5e8d.css.map",
+    "main.5a77a1c9.js.map": "/naveraladin-app/static/js/main.5a77a1c9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.85ef5e8d.css",
+    "static/js/main.5a77a1c9.js"
+  ]
+}
