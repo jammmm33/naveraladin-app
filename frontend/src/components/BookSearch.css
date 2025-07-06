@@ -1,0 +1,103 @@
+.search-section {
+  text-align: center;   /* 제목 중앙 정렬 */
+  margin-bottom: 1rem;
+}
+
+.search-section h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  background-color: #f2f6fd;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.search-button {
+  padding: 0.6rem 1.2rem;
+  background-color: #7aa9ff;
+  color: white;
+  border: none;
+  border-radius: 12px;  /* ⬅ 둥그런 네모 */
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.book-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.book-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.book-list li:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.book-list img {
+  width: 85px;
+  height: auto;
+  border-radius: 6px;
+  margin-right: 1rem;
+  object-fit: contain;
+}
+
+.book-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.book-title {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #222;
+}
+
+.book-meta {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.book-link {
+  font-size: 0.85rem;
+  color: #4066ff;
+  text-decoration: none;
+}
+.book-link:hover {
+  text-decoration: underline;
+}
+
+.search-button:hover {
+  transform: scale(1.1);  /* 커서 올리면 110% 커짐 */
+}
+
+.search-button:active {
+  transform: scale(0.95);  /* 클릭하면 살짝 작아짐 */
+}

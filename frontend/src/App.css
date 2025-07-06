@@ -1,0 +1,53 @@
+/* 전체 배경 */
+body {
+  margin: 0;
+  background-color: #e6edff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 상단 로고 영역 */
+.logo-banner {
+  background-color: #7aa9ff;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+}
+
+.logo-banner h1 {
+  margin: 0;
+  color: white;
+  font-size: 2rem;
+}
+
+/* 메인 콘텐츠 두 칸 레이아웃 */
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+/* 좌우 패널 */
+.left-pane, .right-pane {
+  flex: 1;
+  background-color: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+}
+
+/* 제목 */
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
