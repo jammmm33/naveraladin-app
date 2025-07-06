@@ -10,7 +10,7 @@ function BlogReview() {
     if (!title.trim()) return;
 
     try {
-      const response = await axios.get(`http://localhost:4000/api/blogs/search?title=${encodeURIComponent(title)}`);
+      const response = await axios.get(`https://naveraladin-backend.onrender.com/api/blogs/search?title=${encodeURIComponent(title)}`);
       setBlogs(response.data);
     } catch (error) {
       console.error('블로그 검색 오류:', error);

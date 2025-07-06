@@ -10,7 +10,7 @@ function BookSearch() {
     if (!keyword.trim()) return;
 
     try {
-      const response = await axios.get(`http://localhost:4000/api/books/search?keyword=${keyword}`);
+      const response = await axios.get(`https://naveraladin-backend.onrender.com/api/books/search?keyword=${keyword}`);
       setBooks(response.data);
     } catch (error) {
       console.error('검색 실패:', error);
