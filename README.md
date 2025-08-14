@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# 📘 리뷰북 (ReviewBook)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/) [![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/) [![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
 
-## Available Scripts
+> 알라딘 도서 API와 네이버 블로그 검색 API를 연동하여, 책 검색과 관련 리뷰 조회를 한곳에서 간편하게 해결할 수 있는 웹 애플리케이션입니다.
 
-In the project directory, you can run:
+<br>
 
-### `npm start`
+## **📜 프로젝트 정보**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-   **프로젝트 기간:** 2025.07.05 ~ 2025.07.07
+-   **🔗 배포 링크:** [https://jammmm33.github.io/naveraladin-app](https://jammmm33.github.io/naveraladin-app)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## **✨ 주요 기능**
 
-### `npm test`
+-   **📚 도서 검색:** 키워드를 입력하면 알라딘 API를 통해 관련 도서 목록(표지, 제목, 저자, 출판사 등)을 실시간으로 조회합니다.
+-   **✍️ 블로그 리뷰 검색:** 검색된 도서의 정확한 제목을 입력하면, 네이버 블로그 API를 통해 관련 리뷰 포스트를 즉시 찾아 보여줍니다.
+-   **🖥️ 반응형 UI:** 깔끔하고 직관적인 2단 레이아웃을 통해 검색 결과와 리뷰를 한눈에 비교하며 볼 수 있습니다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## **🛠️ 기술 스택**
 
-### `npm run build`
+### **Frontend**
+-   **`React.js`**, **`CSS`**, **`Axios`**
+-   **배포:** `GitHub Pages`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### **Backend**
+-   **`Node.js`**, **`Express.js`**, **`Axios`**
+-   **역할:** 외부 API(알라딘, 네이버) 호출을 위한 프록시 서버 역할, CORS 문제 해결
+-   **배포:** `Render`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## **🏛️ 시스템 작동 원리**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1.  **사용자 요청:** React로 구현된 프론트엔드에서 사용자가 책 키워드나 제목을 입력합니다.
+2.  **백엔드 API 호출:** 프론트엔드는 Render에 배포된 Node.js 백엔드 서버로 API 요청을 보냅니다.
+3.  **외부 API 연동:** 백엔드 서버는 요청에 따라 알라딘 도서 API 또는 네이버 블로그 검색 API를 호출하여 데이터를 가져옵니다. 이 과정에서 민감한 API 키를 안전하게 관리합니다.
+4.  **데이터 응답:** 백엔드는 외부 API로부터 받은 데이터를 가공하여 프론트엔드에 전달합니다.
+5.  **결과 출력:** 프론트엔드는 전달받은 데이터를 화면에 렌더링하여 사용자에게 보여줍니다.
